@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      button {
+        padding: 20px;
+      }
+      * {
+        font: normal 20pt Arial;
+      }
+    </style>
+  </head>
+
+  <script>
+    function converter() {
+      temp = Number(window.prompt(`Digite uma temperatura em C (Celsius)`))
+      ke = temp + 273.15
+      fa = (temp * 9) / 5 + 32
+
+      document.getElementById(
+        'titulo'
+      ).innerHTML = `<strong>A temperatura de ${temp} C,corresponde a...</strong> <br>`
+      Number(
+        (document.getElementById('kelvin').innerHTML = `${ke}K (Kelvin) <br>`)
+      )
+      Number((document.getElementById('fah').innerHTML = `${fa}F (Fahrenheit)`))
+    }
+  </script>
+
+  <body>
+    <h1>Conversor de temperaturas</h1>
+    <button onclick="converter()">Converter</button>
+    <div>
+      <span id="titulo"></span>
+      <span id="kelvin"></span>
+      <span id="fah"></span>
+    </div>
+  </body>
+</html>

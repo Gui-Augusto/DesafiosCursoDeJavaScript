@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      button {
+        padding: 20px;
+      }
+      * {
+        font: normal 20pt Arial;
+      }
+    </style>
+  </head>
+
+  <script>
+    function converter() {
+      numero = window.prompt(`Digite uma distância em metros`)
+      Km = numero / 1000
+      Hm = numero / 100
+      Dam = numero / 10
+      dm = numero * 10
+      cm = numero * 100
+      mm = numero * 1000
+      document.getElementById(
+        'titulo'
+      ).innerHTML = `<strong>A distância de ${numero} metros,corresponde a...</strong> <br>`
+      document.getElementById(
+        'resultadokm'
+      ).innerHTML = `${Km} quilômetros (Km) <br>`
+      document.getElementById(
+        'resultadohm'
+      ).innerHTML = `${Hm} hectômetros (Hm) <br>`
+      document.getElementById(
+        'resultadodam'
+      ).innerHTML = `${Dam} decâmetros (Dam) <br>`
+      document.getElementById(
+        'resultadodm'
+      ).innerHTML = `${dm} decímetros (dm) <br>`
+      document.getElementById(
+        'resultadocm'
+      ).innerHTML = `${cm} centímetros (cm) <br>`
+      document.getElementById('resultadomm').innerHTML = `${mm} milímetros (mm)`
+    }
+  </script>
+
+  <body>
+    <h1><strong>Conversor de medidas</strong></h1>
+    <button onclick="converter()">Converter</button>
+    <div>
+      <span id="titulo"></span>
+      <span id="resultadokm"></span>
+      <span id="resultadohm"></span>
+      <span id="resultadodam"></span>
+      <span id="resultadodm"></span>
+      <span id="resultadocm"></span>
+      <span id="resultadomm"></span>
+    </div>
+  </body>
+</html>
